@@ -5,212 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table tennis</title>
-    <style>
-        body,
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .page {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .header {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            width: 100%;
-            height: 100px;
-            background: #4B57C4;
-        }
-
-        .logo {
-            width: 140px;
-            height: 100px;
-            outline: 1px solid black;
-        }
-
-        .header__upper {
-            width: calc(100% - 140px);
-            height: 50px;
-            outline: 1px solid black;
-        }
-
-        .nav {
-            width: calc(100% - 140px);
-            height: 50px;
-            outline: 1px solid black;
-        }
-
-        .nav__item {
-            display: table-cell;
-            position: relative;
-            font-size: 18px;
-            font-family: sans-serif;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .nav__sublist {
-            visibility: hidden;
-            opacity: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 200px;
-            transition: 0.5s;
-            background: #4B57C4;
-        }
-
-        .nav__item:hover {
-            background: #2A37A6;
-        }
-
-        .nav__item:hover .nav__sublist {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .nav__link {
-            display: block;
-            height: 50px;
-            padding: 0 20px;
-            line-height: 50px;
-        }
-
-        .nav__subitem {
-            font-size: 16px;
-            text-transform: none;
-        }
-
-        .nav__subitem:hover {
-            background: #2A37A6;
-        }
-
-        .nav__sublink {
-            display: block;
-            padding: 10px 20px;
-        }
-
-        .main {
-            background: #98FB98;
-        }
-
-        .slider {
-            width: 100%;
-            height: 60vw;
-            max-height: 660px;
-            outline: 1px solid black;
-        }
-
-        .news {
-            height: 800px;
-            outline: 1px solid black;
-        }
-
-        .footer {
-            height: 150px;
-            background: #5F9EA0;
-        }
-
-        @media screen and (min-width: 641px) and (max-width: 768px) {
-            .nav__item {
-                font-size: 16px;
-            }
-            .nav__sublist {
-                width: 150px;
-            }
-            .nav__link {
-                padding: 0 10px;
-            }
-            .nav__subitem {
-                font-size: 14px;
-            }
-            .nav__sublink {
-                display: block;
-                padding: 8px 15px;
-            }
-        }
-
-        @media screen and (min-width: 0px) and (max-width: 640px) {
-            .page {
-                margin: 0;
-                width: 100%;
-            }
-            .header {
-                position: fixed;
-                top: 0;
-                height: 50px;
-            }
-            .logo {
-                width: 70px;
-                height: 50px;
-            }
-            .header__upper {
-                position: absolute;
-                top: 50px;
-                width: 100%;
-                height: 30px;
-                background: #E9967A;
-            }
-            .nav {
-                width: calc(100% - 70px);
-            }
-            .main {
-                margin-top: 80px;
-            }
-            .nav__list {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="page">
+        <input type="checkbox" id="hmt" class="hidden-menu-ticker">
         <header class="header">
-            <div class="logo"><a href="#">Лого</a></div>
+            <div class="logo"><a href="index.html">Лого</a></div>
             <div class="header__upper"><a href="#">Регистрация</a></div>
             <nav class="nav">
+                <div class="nav__hidden">
+                    <label class="btn-menu" for="hmt">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                </div>
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Турниры</a>
+                    <li class="nav__item"><a href="news.html" class="nav__link">Новости</a></li>
+                    <input type="checkbox" id="btn-submenu-tourn" class="btn-submenu-tourn">
+                    <input type="checkbox" id="btn-submenu-info" class="btn-submenu-info">
+                    <li class="nav__item"><label for="btn-submenu-tourn"><a class="nav__link">Турниры</a></label>
                         <ul class="nav__sublist">
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Регистрация</a></li>
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Расписание</a></li>
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Результаты</a></li>
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Фото</a></li>
+                            <li class="nav__subitem"><a href="registration.html" class="nav__sublink">Регистрация</a></li>
+                            <li class="nav__subitem"><a href="shedule.html" class="nav__sublink">Расписание</a></li>
+                            <li class="nav__subitem"><a href="registration.html" class="nav__sublink">Результаты</a></li>
+                            <li class="nav__subitem"><a href="photos.html" class="nav__sublink">Фото</a></li>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Информация</a>
+                    <li class="nav__item"><label for="btn-submenu-info"><a class="nav__link">Информация</a></label>
                         <ul class="nav__sublist">
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Положение</a></li>
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Программа</a></li>
-                            <li class="nav__subitem"><a href="#" class="nav__sublink">Место проведения</a></li>
+                            <li class="nav__subitem"><a href="doc.html" class="nav__sublink">Положение</a></li>
+                            <li class="nav__subitem"><a href="program.html" class="nav__sublink">Программа</a></li>
+                            <li class="nav__subitem"><a href="center.html" class="nav__sublink">Место проведения</a></li>
                         </ul>
                     </li>
-                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
         </header>
         <main class="main">
-            <div class="slider">Слайдер</div>
+            <div class="slider">
+                <input type="radio" id="slide1" name="slide" class="slider__input" checked="" />
+                <input type="radio" id="slide2" name="slide" class="slider__input"/>
+                <input type="radio" id="slide3" name="slide" class="slider__input"/>
+                <div class="slider__nav">
+                    <ul class="slider__nav-list">
+                        <li class="slider__nav-item"><label for="slide1"><div class="slider__pin"></div></label></li>
+                        <li class="slider__nav-item"><label for="slide2"><div class="slider__pin"></div></label></li>
+                        <li class="slider__nav-item"><label for="slide3"><div class="slider__pin"></div></label></li>
+                    </ul>
+                </div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide1 arrows">
+                    <label for="slide3">&lt;</label>
+                    <label for="slide2">&gt;</label>
+                </div>
+                <div class="slide2 arrows">
+                    <label for="slide1">&lt;</label>
+                    <label for="slide3">&gt;</label>
+                </div>
+                <div class="slide3 arrows">
+                    <label for="slide2">&lt;</label>
+                    <label for="slide1">&gt;</label>
+                </div>
+            </div>
             <div class="news">Новости</div>
         </main>
         <footer class="footer">Подвал</footer>
     </div>
 </body>
+
 
 </html>
