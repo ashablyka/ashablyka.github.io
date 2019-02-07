@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table tennis</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="page">
+        <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+        <header class="header">
+            <div class="logo"><a href="index.html">Лого</a></div>
+            <div class="header__upper"><a href="#">Регистрация</a></div>
+            <nav class="nav">
+                <div class="nav__hidden">
+                    <label class="btn-menu" for="hmt">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="news.html" class="nav__link">Новости</a></li>
+                    <input type="checkbox" id="btn-submenu-tourn" class="btn-submenu-tourn">
+                    <input type="checkbox" id="btn-submenu-info" class="btn-submenu-info">
+                    <li class="nav__item"><label for="btn-submenu-tourn"><a class="nav__link">Турнир</a></label>
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="registration.html" class="nav__sublink">Регистрация</a></li>
+                            <li class="nav__subitem"><a href="shedule.html" class="nav__sublink">Расписание</a></li>
+                            <li class="nav__subitem"><a href="registration.html" class="nav__sublink">Результаты</a></li>
+                            <li class="nav__subitem"><a href="photos.html" class="nav__sublink">Фото</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><label for="btn-submenu-info"><a class="nav__link">Информация</a></label>
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="doc.html" class="nav__sublink">Положение</a></li>
+                            <li class="nav__subitem"><a href="program.html" class="nav__sublink">Программа</a></li>
+                            <li class="nav__subitem"><a href="center.html" class="nav__sublink">Место проведения</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+                <form action="#" method="post" name="reg_form" class="reg-form">
+                    <p>
+                        <label for="surname" class="question">Фамилия* (латиницей):</label>
+                        <input class="answer" type="text" name="surname" id="surname" pattern="^[A-Za-z\s'-]+$" autofocus required>
+                    </p>
+                    <p>
+                        <label for="name" class="question">Имя* (латиницей): </label>
+                        <input class="answer" type="text" name="name" id="name" pattern="^[A-Za-z\s'-]+$" required>
+                    </p>
+                    <p><span class="question">Ваш пол:*</span>
+                        <label class="answer">Мужской <input type="radio" name="gender" value="male" required></label>
+                        <label class="answer">Женский <input type="radio" name="gender" value="female"></label>
+                    </p>
+                    <p>
+                        <label for="date" class="question">Дата рождения:*</label>
+                        <input class="answer" type="date" name="date" id="date" required>
+                    </p>
+
+                    <p>
+                        <label for="email" class="question">E-mail:*</label>
+                        <input class="answer" type="email" name="email" id="email" required>
+                    </p>
+                    <p>
+                        <label for="tel" class="question">Телефон:</label>
+                        <input class="answer" type="tel" name="tel" id="tel">
+                    </p>
+                    <p>
+                        <label for="text" class="question">Дополнительная информация:</label>
+                        <textarea  class="answer" name="text" cols="30" rows="6" id="text"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" name="submit" value="Отправить">
+                    </p>
+                </form>
+                <script src="//megatimer.ru/get/4520ba33d9907baf39f20514f36294be.js"></script>
+        </main>
+        <footer class="footer">Подвал</footer>
+    </div>
+</body>
+
+
+</html>
