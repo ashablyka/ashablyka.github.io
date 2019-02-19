@@ -6,7 +6,7 @@ function init(){
         behaviors: ["drag"]
         });
     var placemark = new ymaps.Placemark ([53.92452718, 27.51777399] , {
-        hintContent: "проспект Победителей, 63к1",
+        hintContent: "проспект Победителей, 63 к. 1",
         balloonContent: "Дворец тенниса"
     });
     map.geoObjects.add(placemark);
