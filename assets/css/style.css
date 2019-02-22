@@ -46,8 +46,6 @@ a {
 
 .header__social {
     float: right;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 100px;
     line-height: 170px;
@@ -114,9 +112,6 @@ a {
     top: 100%;
     left: 0;
     width: 200px;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
     background: #2A37A6;
     z-index: 2;
 }
@@ -360,8 +355,6 @@ a {
 }
 
 .footer__social {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 100px;
     line-height: 130px;
@@ -457,8 +450,6 @@ a {
 }
 
 .contacts-form-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -691,8 +682,7 @@ a {
     }
     .nav {
         border-bottom: 1px solid #4B57C4;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     .nav__hidden {
@@ -879,13 +869,8 @@ a {
     }
 
     .contacts-form-body {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
     .contacts-form-left {
         margin-right: 0;
@@ -899,8 +884,9 @@ a {
         margin-left: calc(50% - 48px);
     }
 }
-    @media screen and (min-width: 0px) and (max-width: 300px) {
-        .main-title {
-            display: none;
-        }
+
+@media screen and (min-width: 0px) and (max-width: 300px) {
+    .main-title {
+        display: none;
     }
+}
